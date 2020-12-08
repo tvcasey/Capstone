@@ -11,7 +11,7 @@ title: {
     type: String,
     required: true
 },
-post: {
+entry: {
     type: String,
     required: true
 }
