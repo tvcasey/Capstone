@@ -14,7 +14,8 @@ console.log(uri);
 
 mongoose.connect(uri, {
     useNewUrlParser: true,
-    useUnifiedTechnology: true
+    //useUnifiedTechnology: true,
+    useUnifiedTopology: true
     }, (err) => {
         if(err){
             throw err

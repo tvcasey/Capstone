@@ -17,6 +17,6 @@ entry: {
 }
 })
 
-const Blogs = mongoose.model("Blog", blogSchema);
+const Blog = mongoose.model("Blog", blogSchema);
 
-module.exports = Blogs
+module.exports = Blog
