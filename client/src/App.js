@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Route } from 'react-router-dom';
 import './App.css';
+//import { Button } from 'reactstrap';
+import Blogdisplay from './components/Blogdisplay';
 
 function App() {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('http://localhost:8080/api/blogs')
+      .then(res => setPosts(res.data))
+      .catch(error => console.log(error));
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>This begins an amazing journey.</h1>
+      {console.log(posts)}
+  <Route to= '/' component={posts} />
     </div>
   );
 }

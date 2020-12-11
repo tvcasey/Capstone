@@ -1,18 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const Blog = require('../models/blog');
-
+const blogs = require('./blogs');
 
 //get blogs  CHECK FOR RIGHT VARIABLES!!
 router.get('/', (req, res) => {
-    console.log(req, "get was hit");
+    console.log("get was hit");
     Blog.find()
     .then(blogs => res.json(blogs))
     .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
 //add blog  CHECK FOR RIGHT VARIABLES!!
-router.post('add', (req, res) => {
+router.post('/add', (req, res) => {
+    console.log("It got through!");
     const newBlog = new Blog({
         name: req.body.name,
         title: req.body.title,
@@ -28,19 +29,19 @@ router.post('add', (req, res) => {
 // get post by id CHECK FOR RIGHT VARIABLES!
 router.get('/:id', (req, res) => {
     Blog.findById(req.params.id)
-    .then(entries => res.json(entries))
+    .then(blogs => res.json(blogs))
     .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
 // put NEEDS TO CATERED TO A REPLY TO POST
-router.put('reply/:id', (req, res) => {
+router.put('/reply/:id', (req, res) => {
     Blog.findById(req.params.id)
-    .then(entries => {
-        entries.name = req.body.name;
-        entries.title = req.body.title;
-        entries.entry = req.body.entry;
+    .then(blogs => {
+        blogs.name = req.body.name;
+        blogs.title = req.body.title;
+        blogs.entry = req.body.entry;
 
-        entries
+        blogs
         .save()
         .then(() => res.json("A reply has been sent."))
         .catch(err => res.status(400).json(`Error: ${err}`))
