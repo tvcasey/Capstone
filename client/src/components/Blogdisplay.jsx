@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Blogdisplay.css';
+
 
 const Blogdisplay = ( props ) => {
     const [posts, setPosts] = useState([]);
@@ -13,23 +15,25 @@ const Blogdisplay = ( props ) => {
         console.log(posts)
 
     return (
-            <div>
+            <div className='flexbox-container'>
                 {posts.map((blogs, key) => (
-                    <div className='container'>
+                    <div className='row justify-content-end'>
+                        <div className='col-sm-4'>
                         <h2>{blogs.name}</h2>
                         <span>{blogs.title}</span>
                         <p>{blogs.entry}</p>
-                        <div className='row my-5'>
-                            <div className='col-sm-2'>
+                        <div className='row my-2'>
+                            <div className='test'>
                                 <a href='' className='btn btn-outline-success'>
                                     Reply to Post
                                 </a>
                             </div>
-                            <div className='col-sm-2'>
+                            <div className='test'>
                                 <a href='' className='btn btn-outline-danger'>
                                     Delete Post
                                 </a>
                             </div>
+                        </div>
                         </div>
                     </div>
                 ))}
