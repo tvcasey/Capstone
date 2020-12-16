@@ -13,6 +13,7 @@
 }
 
 .flexbox-container {
-    margin: 25px 25px 25px 25px;
+    margin: 100px;
     background-color: rgb(196, 198, 204);
+    padding-right: 100px;
 }

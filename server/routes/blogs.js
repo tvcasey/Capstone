@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Blog = require('../models/blog');
+const Reply = require('../models/replies');
 const blogs = require('./blogs');
 
 //get blogs  CHECK FOR RIGHT VARIABLES!!
@@ -17,7 +18,8 @@ router.post('/add', (req, res) => {
     const newBlog = new Blog({
         name: req.body.name,
         title: req.body.title,
-        entry: req.body.entry
+        entry: req.body.entry,
+       
     });
 
     newBlog
@@ -26,6 +28,21 @@ router.post('/add', (req, res) => {
     .catch(err => res.status(400).json(`Error: ${err}`));
 
 });
+
+// post a Reply Only Field to a Post
+
+router.post('/add/_id', (req, res) => {
+    console.log("Baby Ruth!");
+    const newReply = new Reply({
+        reply: req.body.reply,
+       });
+    newReply
+    .save()
+    .then(() => res.json("Your reply is on the blog!"))
+    .catch(err => res.status(400).json(`Error: ${err}`));
+
+});
+
 // get post by id CHECK FOR RIGHT VARIABLES!
 router.get('/:id', (req, res) => {
     Blog.findById(req.params.id)

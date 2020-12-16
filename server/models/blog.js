@@ -14,7 +14,8 @@ title: {
 entry: {
     type: String,
     required: true
-}
+},
+
 })
 
 const Blog = mongoose.model("Blog", blogSchema);
