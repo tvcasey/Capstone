@@ -9,6 +9,7 @@ import SignIn from './pages/SignIn';
 import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Reply from './pages/Reply';
+import IncomeStatement from './components/IncomeStatement';
 //import StockMarket from '/StockMarket';
 
 function App() {
@@ -17,9 +18,10 @@ function App() {
     <div className="App">
       <Reply/>
       <AddPost/>
-      <Blogdisplay/>
+      (<IncomeStatement/><Blogdisplay/>)
       <Header/>
       <Navbar />
+      
           <Router>
             {/*<Blogdisplay path='/' />
             <AddPost path='/add' />
