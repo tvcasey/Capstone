@@ -10,7 +10,8 @@ import Navbar from './components/Navbar';
 import Header from './components/Header';
 import Reply from './pages/Reply';
 import IncomeStatement from './components/IncomeStatement';
-//import StockMarket from '/StockMarket';
+import BalanceSheet from './components/BalanceSheet';
+import CashFlows from './components/CashFlows';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
     <div className="App">
       <Reply/>
       <AddPost/>
-      (<IncomeStatement/><Blogdisplay/>)
+      (<IncomeStatement/><BalanceSheet/><CashFlows/><Blogdisplay/>)
       <Header/>
       <Navbar />
       
