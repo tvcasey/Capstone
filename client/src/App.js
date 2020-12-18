@@ -7,11 +7,16 @@ import AddPost from './pages/AddPost';
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import Navbar from './components/Navbar';
+import Nav from 'react-bootstrap/Nav';
 import Header from './components/Header';
 import Reply from './pages/Reply';
 import IncomeStatement from './components/IncomeStatement';
 import BalanceSheet from './components/BalanceSheet';
 import CashFlows from './components/CashFlows';
+import ModalChart from './components/ModalChart';
+import FinancialChart from './components/FinancialChart';
+//import { Line } from 'react-chartjs-2';
+
 
 function App() {
 
@@ -19,10 +24,12 @@ function App() {
     <div className="App">
       <Reply/>
       <AddPost/>
-      (<IncomeStatement/><BalanceSheet/><CashFlows/><Blogdisplay/>)
-      <Header/>
+      <IncomeStatement/><BalanceSheet/><CashFlows/>
+      {/*<Blogdisplay/>
+      <Header/>*/}
       <Navbar />
-      
+      {/*<ModalChart/>
+      <FinancialChart/>*/}      
           <Router>
             {/*<Blogdisplay path='/' />
             <AddPost path='/add' />

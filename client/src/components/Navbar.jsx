@@ -18,21 +18,21 @@ const Example = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">Financial Blog</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/components/IncomeStatement">Income Statement</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="/components/BalanceSheet">Balance Sheet</NavLink>
             </NavItem>  
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="/components/CashFlows">Cash Flows</NavLink>
             </NavItem>  
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Walk the Talk: Financial Blog</NavbarText>
         </Collapse>
       </Navbar>
     </div>
