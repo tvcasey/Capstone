@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Table } from 'reactstrap';
 
 
+
 function IncomeStatement() {
     const [income, setIncome] = useState({annualReports: []});
 
@@ -18,14 +19,15 @@ function IncomeStatement() {
                 console.log(error);
             })
             console.log('Man I dont know if this thing is actually firing here???!!!');
-    // empty dependency array means this effect will only run once (like componentDidMount in classes)
+            
+            // empty dependency array means this effect will only run once (like componentDidMount in classes)
     }, []);
     
     return (
     <Table striped>
-
+      
         {income.annualReports.map((annualReports) => ( 
-                <div key={annualReports.id}>
+                  <div key={annualReports}>
       <thead>
         <tr>
           <th>INCOME STATEMENT</th>
@@ -64,7 +66,8 @@ function IncomeStatement() {
             </div>    
             ))}
     </Table>
-            );
-            }
-
+    
+    );
+}
+            
 export default IncomeStatement;

@@ -17,19 +17,23 @@ import ModalChart from './components/ModalChart';
 import FinancialChart from './components/FinancialChart';
 //import { Line } from 'react-chartjs-2';
 
+//const ThemeContext = React.createContext('light');
 
-function App() {
+function App(props) {
 
   return (
     <div className="App">
       <Reply/>
       <AddPost/>
-      <IncomeStatement/><BalanceSheet/><CashFlows/>
-      {/*<Blogdisplay/>
-      <Header/>*/}
+      {/*<ThemeContext.Provider value='dark'>*/}
+      <IncomeStatement/>
+      {/*</ThemeContext.Provider>*/}
+      {/*<BalanceSheet/><CashFlows/>*/}
+      <Blogdisplay/>
+      <Header/>
       <Navbar />
-      {/*<ModalChart/>
-      <FinancialChart/>*/}      
+      <ModalChart/>
+      <FinancialChart/>      
           <Router>
             {/*<Blogdisplay path='/' />
             <AddPost path='/add' />

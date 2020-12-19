@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Blogdisplay.css';
+import './Pages.css';
 //import './Reply';
 
 

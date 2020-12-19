@@ -1,5 +1,4 @@
-
-.row {
+.Blogdisplay .row {
     display: flex;
     justify-content: space-between;
     justify-content: space-around;
@@ -7,13 +6,19 @@
     align-content: flex-end;    
 }
 
-.container {
+.Blogdisplay .container {
     background-color: red;
     
 }
 
-.flexbox-container {
+.Blogdisplay .flexbox-container {
     margin: 100px;
     background-color: rgb(196, 198, 204);
     padding-right: 100px;
+}
+
+
+
+.ModalChart .fluid-container{
+    
 }
