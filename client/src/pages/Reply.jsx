@@ -16,10 +16,12 @@ const Reply = () => {
         setReply('');
     
     axios
-        .post('http://localhost:8080/api/blogs/add/_id', blogs)
+        .post('http://localhost:8080/api/blogs/add/reply', blogs)
+        
         .then(res => console.log(res.data))
         .catch(err => {
             console.log(err);
+            console.log('IS THIS WORKING???');
         })
     };
 
@@ -33,6 +35,7 @@ const Reply = () => {
                                 value={reply}
                                 onChange={e => setReply(e.target.value)}
                                 className='form-control'
+                                placeholder='Write your Response.'
                                 rows='5'>
                                 </textarea>
                         </div>

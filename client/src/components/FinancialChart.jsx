@@ -4,7 +4,7 @@ import axios from 'axios';
 import IncomeStatement from './IncomeStatement';
 
 
-const FinancialChart = () => {
+const FinancialChart = (props) => {
   const[chartData, setChartData] = useState([]);
 
   const chart = () => ({
@@ -24,15 +24,7 @@ const FinancialChart = () => {
 
 useEffect(() => {
   chart()
-  axios.get('https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol=IBM&apikey=FW76ULI2MV44V3PS')
-            //.then(response => setIncome(response.data.total));
-            .then(res => {
-                console.log(res.data);
-                setChartData(res.data);
-            })
-            .catch(error => {
-                console.log(error);
-            })
+
             console.log('Man I dont know if this thing is actually firing here???!!!');
     }, [])
 
@@ -41,6 +33,7 @@ useEffect(() => {
     <div className='Graph'>
       <h3>IBM</h3>
       <div style={{height: '500px', width: '500px'}}>
+        <IncomeStatement />
         <Line data={chart()} options={{
           responsive: true,
           title: {text: 'Annual Net Income(5 Years)', display: true},

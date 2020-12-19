@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+/* const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
@@ -13,4 +13,4 @@ reply: {
 
 const Reply = mongoose.model("Reply", replySchema);
 
-module.exports = Reply
+module.exports = Reply */

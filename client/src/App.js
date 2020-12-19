@@ -16,6 +16,7 @@ import CashFlows from './components/CashFlows';
 import ModalChart from './components/ModalChart';
 import FinancialChart from './components/FinancialChart';
 //import { Line } from 'react-chartjs-2';
+import FinancialStatements from './pages/FinancialStatements';
 
 //const ThemeContext = React.createContext('light');
 
@@ -26,14 +27,15 @@ function App(props) {
       <Reply/>
       <AddPost/>
       {/*<ThemeContext.Provider value='dark'>*/}
-      <IncomeStatement/>
+      {/*<IncomeStatement/>*/}
       {/*</ThemeContext.Provider>*/}
       {/*<BalanceSheet/><CashFlows/>*/}
       <Blogdisplay/>
       <Header/>
       <Navbar />
       <ModalChart/>
-      <FinancialChart/>      
+      {/*<FinancialStatements />*/}
+      {/*<FinancialChart/>*/}      
           <Router>
             {/*<Blogdisplay path='/' />
             <AddPost path='/add' />

@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const config = require('config');
 const cors = require('cors');
 const blogs = require('./routes/blogs');
+//const replies = require('./routes/blogs');
 
 
 const app = express();
@@ -11,6 +12,7 @@ const port = process.env.PORT || 8080;
 app.use(cors());
 app.use(express.json());
 app.use('/api/blogs', blogs);
+//app.use('/api/replies', replies);
 
 const uri = config.get('mongoURI');
 console.log(uri);

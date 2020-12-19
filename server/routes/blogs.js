@@ -31,12 +31,12 @@ router.post('/add', (req, res) => {
 
 // post a Reply Only Field to a Post
 
-router.post('/add/_id', (req, res) => {
+router.post('/add/reply', (req, res) => {
     console.log("Baby Ruth!");
-    const newReply = new Reply({
+    const newReply = new Blog({
         reply: req.body.reply,
        });
-    newReply
+    newBlog
     .save()
     .then(() => res.json("Your reply is on the blog!"))
     .catch(err => res.status(400).json(`Error: ${err}`));

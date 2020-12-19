@@ -23,7 +23,7 @@ const Example = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/IncomeStatement">Income Statement</NavLink>
+              <NavLink href="/IncomeStatement">Income Statement</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="/components/BalanceSheet">Balance Sheet</NavLink>

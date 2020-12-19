@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Reply from './Reply';
 import './Pages.css';
 //import './Reply';
 
@@ -17,6 +18,7 @@ const Blogdisplay = ( props ) => {
 
     return (
             <div className='flexbox-container'>
+                {/*<Reply />*/}
                 {posts.map((blogs, key) => (
                     <div className='row justify-content-end' key={key}>
                         <div className='col-sm-4'>
