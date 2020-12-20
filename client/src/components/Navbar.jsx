@@ -9,6 +9,7 @@ import {
   NavLink,
   NavbarText
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,15 +23,21 @@ const Example = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/IncomeStatement">Income Statement</NavLink>
-            </NavItem>
-            <NavItem>
+            <Link to='/pages/Blogdisplay'>Home
+            {/* <NavItem>
+              <NavLink href="/pages/Blogdisplay">Home</NavLink>
+            </NavItem> */}
+            </Link>
+            {/* <NavItem>
               <NavLink href="/components/BalanceSheet">Balance Sheet</NavLink>
-            </NavItem>  
-            <NavItem>
-              <NavLink href="/components/CashFlows">Cash Flows</NavLink>
-            </NavItem>  
+            </NavItem>   */}
+            <Link to='/AddPost'>Add/Reply
+            </Link>
+            <Link to='/FinancialStatements'>Financial Statements
+            </Link>
+            {/* <NavItem>
+              <NavLink href="/FinancialStatements">Cash Flows</NavLink>
+            </NavItem>   */}
           </Nav>
           <NavbarText>Walk the Talk: Financial Blog</NavbarText>
         </Collapse>

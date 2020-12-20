@@ -22,7 +22,7 @@ function CashFlows() {
     }, []);
     
     return (
-    <Table striped>
+      <Table striped>
 
         {cash.annualReports.map((annualReports) => ( 
                 <div key={annualReports.id}>

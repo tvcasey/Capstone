@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Reply from './Reply';
 import './Pages.css';
+import { Link } from 'react-router-dom';
 //import './Reply';
 
 
@@ -28,15 +29,15 @@ const Blogdisplay = ( props ) => {
                         <p>{blogs.reply}</p>                    
                         <div className='row my-2'>
                             <div className='test'>
-                            
-                                <a href='/' className='btn btn-outline-success'>
+                                
+                                <Link path='/AddPost' className='btn btn-outline-success'>
                                     Reply to Post
-                                </a>
+                                </Link>
                             </div>
                             <div className='test'>
-                                <a href='/' className='btn btn-outline-primary'>
+                                <Link path='/AddPost' className='btn btn-outline-primary'>
                                     Add New Post
-                                </a>
+                                </Link>
                             </div>
                             <div className='test'>
                                 <a href='/' className='btn btn-outline-danger'>

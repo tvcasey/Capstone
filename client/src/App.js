@@ -15,6 +15,7 @@ import BalanceSheet from './components/BalanceSheet';
 import CashFlows from './components/CashFlows';
 import ModalChart from './components/ModalChart';
 import FinancialChart from './components/FinancialChart';
+import Main from './pages/Main';
 //import { Line } from 'react-chartjs-2';
 import FinancialStatements from './pages/FinancialStatements';
 
@@ -25,29 +26,19 @@ function App(props) {
   return (
     <div className="App">
       {/*<Reply/>*/}
-      <AddPost/>
+      {/* <AddPost/> */}
       {/*<ThemeContext.Provider value='dark'>*/}
       {/*<IncomeStatement/>*/}
       {/*</ThemeContext.Provider>*/}
       {/*<BalanceSheet/><CashFlows/>*/}
-      <Blogdisplay/>
+      {/* <Blogdisplay/> */}
       <Header/>
       <Navbar />
-      <ModalChart/>
+      <Main />
+      {/* <ModalChart/> */}
       {/*<FinancialStatements />*/}
       {/*<FinancialChart/>*/}      
-          <Router>
-            {/*<Blogdisplay path='/' />
-            <AddPost path='/add' />
-            <SignUp path='/signup' />
-            <SignIn path='/signin' />*/}
-            <Link to='/'>Blogsdisplay</Link>
-            {/*<Link to='/add'>AddPost</Link>*/}
-            <Switch>
-              {/*<Route exact path='/' component={Blogdisplay} />*/}
-              {/*<Route exact path='/add' component={AddPost} />*/}
-            </Switch>
-          </Router>
+          
     </div>
   );
 }

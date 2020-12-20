@@ -72,7 +72,7 @@ const AddPost = () => {
                         value={reply}
                         onChange={e => setReply(e.target.value)}
                         className='form-control'
-                        placeholder='Write your Reply.'
+                        placeholder='Write a Reply. Remember to put a name and/or title'
                         rows='5'>
                         </textarea>
                 </div>
