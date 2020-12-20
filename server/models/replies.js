@@ -1,16 +1,16 @@
-/* const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
+// const mongoose = require('mongoose');
+// const Schema = mongoose.Schema;
 
 
-const replySchema = new Schema({
+// const replySchema = new Schema({
 
-reply: {
-    type: String,
-    required: true
-},
+// reply: {
+//     type: String,
+//     required: true
+// }
 
-})
+// })
 
-const Reply = mongoose.model("Reply", replySchema);
+// const Reply = mongoose.model("Reply", replySchema);
 
-module.exports = Reply */
+// module.exports = Reply

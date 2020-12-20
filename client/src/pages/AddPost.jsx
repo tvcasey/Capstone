@@ -6,6 +6,7 @@ const AddPost = () => {
     const [name, setName] = useState('');
     const [title, setTitle] = useState('');
     const [entry, setEntry] = useState('');
+    const [reply, setReply] = useState('');
 
     const changeOnClick = e => {
         e.preventDefault();
@@ -13,12 +14,14 @@ const AddPost = () => {
         const blogs = {
             name,
             title,
-            entry
+            entry,
+            reply,
         };
 
         setName('');
         setTitle('');
         setEntry('');
+        setReply('');
     
     axios
         .post('http://localhost:8080/api/blogs/add', blogs)
@@ -39,7 +42,7 @@ const AddPost = () => {
                         value={name}
                         onChange={e => setName(e.target.value)}
                         className='form-control'
-                        placeholder='Author Name'/>        
+                        placeholder='Enter Your Name or Entity.'/>        
                 </div>
                 <div className='form-group'>
                     <label htmlFor='title'>Title</label>
@@ -48,7 +51,7 @@ const AddPost = () => {
                         value={title}
                         onChange={e => setTitle(e.target.value)}
                         className='form-control'
-                        placeholder='Write a Title'/>
+                        placeholder='Add or Revise a Title'/>
                 </div>
                 <div className='form-group'>
                     <label htmlFor='entry'>Post</label>
@@ -56,12 +59,27 @@ const AddPost = () => {
                         value={entry}
                         onChange={e => setEntry(e.target.value)}
                         className='form-control'
+                        placeholder='Enter Your Statement.'
                         rows='5'>
                     </textarea>
                 </div>
-                <button type='submit' className='btn-btn-primary'>
-                    Post Entry
-                </button>
+                    <button type='submit' className='btn-btn-primary'>
+                        Post Entry
+                    </button>
+                <div className='form-group'>
+                    <label htmlFor='reply'>Reply to Post</label>
+                        <textarea
+                        value={reply}
+                        onChange={e => setReply(e.target.value)}
+                        className='form-control'
+                        placeholder='Write your Reply.'
+                        rows='5'>
+                        </textarea>
+                </div>
+                    <button type='submit' className='btn-btn-primary'>
+                        Post Reply
+                    </button>
+        
             </form>
         </div>
     );

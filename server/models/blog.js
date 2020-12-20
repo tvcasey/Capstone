@@ -16,9 +16,9 @@ entry: {
     required: true
 },
 reply: {
-    type: String,
-    required: true
-}
+     type: String,
+     required: true
+ }
 
 })
 

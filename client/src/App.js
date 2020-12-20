@@ -24,7 +24,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <Reply/>
+      {/*<Reply/>*/}
       <AddPost/>
       {/*<ThemeContext.Provider value='dark'>*/}
       {/*<IncomeStatement/>*/}
