@@ -5,19 +5,19 @@ const Schema = mongoose.Schema;
 const blogSchema = new Schema({
 name: {
     type: String,
-    required: true
+    required: false
 },
 title: {
     type: String,
-    required: true
+    required: false
 },
 entry: {
     type: String,
-    required: true
+    required: false
 },
 reply: {
      type: String,
-     required: true
+     required: false
  }
 
 })

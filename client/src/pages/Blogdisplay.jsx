@@ -22,12 +22,10 @@ const Blogdisplay = ( props ) => {
                 {posts.map((blogs, key) => (
                     <div className='row justify-content-end' key={key}>
                         <div className='col-sm-4'>
-                        
                         <h4>{blogs.name}</h4>
                         <span>{blogs.title}</span>
                         <p>{blogs.entry}</p>
-                        <p>{blogs.reply}</p>
-                        
+                        <p>{blogs.reply}</p>                    
                         <div className='row my-2'>
                             <div className='test'>
                             

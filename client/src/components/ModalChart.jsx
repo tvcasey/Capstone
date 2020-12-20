@@ -5,6 +5,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import FinancialChart from './FinancialChart';
 import {Line} from 'react-chartjs-2';
 //import Pages from './pages/Pages';
+import './Components.css';
 
 const ModalChart = (props) => {
   const {
@@ -20,11 +21,13 @@ const ModalChart = (props) => {
     <div className='fluid-container'>
       <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
       <Modal isOpen={modal} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
-        toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>Modal title</ModalHeader>
-        <ModalBody>
-          <FinancialChart/>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        toggle={toggle} className={className} size='lg'>
+        <ModalHeader toggle={toggle}>Net Income(in billions) 12/31/15 - 12/31/19 (chart below)</ModalHeader>
+        <ModalBody className='dimensions'>
+        <FinancialChart/>
+      
+
+      
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={toggle}>Do Something</Button>{' '}

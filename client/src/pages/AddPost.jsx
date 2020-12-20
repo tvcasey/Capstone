@@ -67,7 +67,7 @@ const AddPost = () => {
                         Post Entry
                     </button>
                 <div className='form-group'>
-                    <label htmlFor='reply'>Reply to Post</label>
+                    <label htmlFor='reply'><h3>Reply to Post</h3></label>
                         <textarea
                         value={reply}
                         onChange={e => setReply(e.target.value)}

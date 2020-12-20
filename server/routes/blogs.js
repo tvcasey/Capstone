@@ -19,7 +19,7 @@ router.post('/add', (req, res) => {
         name: req.body.name,
         title: req.body.title,
         entry: req.body.entry,
-        reply: req.body.entry,
+        reply: req.body.reply,
     });
 
     newBlog
@@ -31,7 +31,7 @@ router.post('/add', (req, res) => {
 
 // post a Reply Only Field to a Post
 
- router.post('/api/replies/add/reply', (req, res) => {
+{/* router.post('/api/replies/add/reply', (req, res) => {
     console.log("Baby Ruth!");
     const newReply = new Reply({
         reply: req.body.reply,
@@ -41,7 +41,7 @@ router.post('/add', (req, res) => {
     .then(() => res.json("Your reply is on the blog!"))
     .catch(err => res.status(400).json(`Error: ${err}`));
 
-}); 
+});*/} 
 
 // get post by id CHECK FOR RIGHT VARIABLES!
 router.get('/:id', (req, res) => {

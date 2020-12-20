@@ -1,0 +1,17 @@
+/* .ModalChart .fluid-container {
+    max-height: 100%;
+    position: absolute;
+    overflow: scroll; 
+
+}*/
+.Modal.xl {
+    height: 150vh;
+    overflow-y: auto;
+
+}
+
+/* .ModalBody {
+    height: 80vh;
+    overflow-y: auto;
+
+} */

@@ -32,11 +32,11 @@ useEffect(() => {
       
     <div className='Graph'>
       <h3>IBM</h3>
-      <div style={{height: '500px', width: '500px'}}>
-        <IncomeStatement />
+      <div style={{height: '2300px', width: '700px'}}>
+        <IncomeStatement/>
         <Line data={chart()} options={{
           responsive: true,
-          title: {text: 'Annual Net Income(5 Years)', display: true},
+          title: {text: 'Annual Net Income(5 Years', display: true},
           scales: {
             yAxes: [
               {
@@ -58,6 +58,7 @@ useEffect(() => {
               }
             ]
           }
+          
         }}/>
       </div>
     </div>
