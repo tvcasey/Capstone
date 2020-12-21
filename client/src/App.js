@@ -16,6 +16,7 @@ import CashFlows from './components/CashFlows';
 import ModalChart from './components/ModalChart';
 import FinancialChart from './components/FinancialChart';
 import Main from './pages/Main';
+import Delete from './components/Delete';
 //import { Line } from 'react-chartjs-2';
 import FinancialStatements from './pages/FinancialStatements';
 
@@ -35,6 +36,7 @@ function App(props) {
       <Header/>
       <Navbar />
       <Main />
+      <Delete/>
       {/* <ModalChart/> */}
       {/*<FinancialStatements />*/}
       {/*<FinancialChart/>*/}      

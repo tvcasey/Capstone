@@ -4,6 +4,7 @@ import Reply from './Reply';
 import './Pages.css';
 import { Link } from 'react-router-dom';
 import FinancialStatements from './FinancialStatements';
+//import Delete from '../components/Delete';
 //import './Reply';
 
 
@@ -22,6 +23,7 @@ const Blogdisplay = ( props ) => {
             <div className='flexbox-container'>
                 <div style={{height: '0px', width: '700px'}}>
                 <FinancialStatements/>
+                {/* <Delete/> */}
                 </div>
                 {posts.map((blogs, key) => (
                     <div className='row justify-content-end' key={key}>
@@ -30,25 +32,25 @@ const Blogdisplay = ( props ) => {
                         <span>{blogs.title}</span>
                         <p>{blogs.entry}</p>
                         <p>{blogs.reply}</p>                    
-                        <div className='row my-2'>
+                        {/* <div className='col-sm-2'>
                             <div className='test'>
                                 
                                 <Link path='/AddPost' className='btn btn-outline-success'>
                                     Reply to Post
                                 </Link>
                             </div>
-                            <div className='test'>
+                            <div className='col-sm-2'>
                                 <Link path='/AddPost' className='btn btn-outline-primary'>
                                     Add New Post
                                 </Link>
                             </div>
-                            <div className='test'>
-                                <a href='/' className='btn btn-outline-danger'>
+                            <div className='col-sm-2'>
+                                <Link path='Delete' className='btn btn-outline-danger'>
                                     Delete Post
-                                </a>
+                                </Link>
                             </div>
                             
-                        </div>
+                        </div> */}
                         </div>
                     </div>
                 ))}
@@ -57,4 +59,4 @@ const Blogdisplay = ( props ) => {
                 };    
                 
 
-    export default Blogdisplay;
+export default Blogdisplay;
