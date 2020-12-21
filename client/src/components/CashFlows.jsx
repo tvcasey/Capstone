@@ -23,7 +23,6 @@ function CashFlows() {
     
     return (
       <Table striped>
-
         {cash.annualReports.map((annualReports) => ( 
                 <div key={annualReports.id}>
       <thead>
