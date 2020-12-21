@@ -10,9 +10,9 @@ const Main = () => {
     
     return (
     <Switch>
-        <Route exact path='/' component={Blogdisplay}></Route>
+        <Route exact path='/Blogdisplay' component={Blogdisplay}></Route>
         <Route exact path='/AddPost' component={AddPost}></Route>
-        <Route exact path='/FinancialStatements' component={FinancialStatements}></Route>
+        {/* <Route exact path='/FinancialStatements' component={FinancialStatements}></Route> */}
     </Switch>
     );
 }

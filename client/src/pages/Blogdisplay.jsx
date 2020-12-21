@@ -3,6 +3,7 @@ import axios from 'axios';
 import Reply from './Reply';
 import './Pages.css';
 import { Link } from 'react-router-dom';
+import FinancialStatements from './FinancialStatements';
 //import './Reply';
 
 
@@ -19,7 +20,9 @@ const Blogdisplay = ( props ) => {
 
     return (
             <div className='flexbox-container'>
-                {/*<Reply />*/}
+                <div style={{height: '0px', width: '700px'}}>
+                <FinancialStatements/>
+                </div>
                 {posts.map((blogs, key) => (
                     <div className='row justify-content-end' key={key}>
                         <div className='col-sm-4'>

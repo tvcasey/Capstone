@@ -1,12 +1,14 @@
-.Blogdisplay .row {
-    display: flex;
+.Blogdisplay {
+    margin: 100px 500px 100px 100px;
+    
+    /* display: flex;
     justify-content: space-between;
     justify-content: space-around;
     align-items: right;
-    align-content: flex-end;    
+    align-content: flex-start;     */
 }
 
-.Blogdisplay .container {
+/* .Blogdisplay .container {
     background-color: red;
     
 }
@@ -15,6 +17,6 @@
     margin: 100px;
     background-color: rgb(196, 198, 204);
     padding-right: 100px;
-}
+} */
 
 
