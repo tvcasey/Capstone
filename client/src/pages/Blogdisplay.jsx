@@ -10,7 +10,7 @@ import Delete from '../components/Delete';
 
 const Blogdisplay = ( props ) => {
     const [posts, setPosts] = useState([]);
-    const [blog, setBlog] = useState([]);
+    //const [blog, setBlog] = useState([]);
 
     // const deletePost = id => {
     //     axios.delete(`http://localhost:8080/api/blogs/delete${id}`)
@@ -29,7 +29,7 @@ const Blogdisplay = ( props ) => {
             <div className='flexbox-container'>
                 <div style={{height: '0px', width: '700px'}}>
                 <FinancialStatements/>
-                {/* <Delete/> */}
+                <Delete/>
                 </div>
                 {posts.map((blogs, key) => (
                     <div className='row justify-content-end' key={key}>
@@ -52,7 +52,7 @@ const Blogdisplay = ( props ) => {
                             </div>
                             <div className='test'>
                                 <button 
-                                onClick={() => setBlog(blog.ID)}
+                                onClick={() => props.setBlog(props.blog._id)}
                                 className='btn btn-outline-danger'>
                                     Delete Post
                                 </button>

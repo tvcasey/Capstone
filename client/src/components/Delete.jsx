@@ -9,10 +9,10 @@ const Delete = ( props ) => {
 
     useEffect(() => {
 
-    const deletePost = id => {
-        Axios.delete(`http://localhost:8080/api/blogs/${id}`)
+    const deletePost = _id => {
+        Axios.delete(`http://localhost:8080/api/blogs/${_id}`)
         .then(res => alert(res.data));
-        setBlog(blog.filter(elem => elem._id !== id));
+        setBlog(blog.filter(elem => elem._id !== _id));
     }
     },    []);
     return (

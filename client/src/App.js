@@ -37,7 +37,7 @@ function App(props) {
       <Navbar />
       <Main />
       <Delete/>
-      {/* <ModalChart/> */}
+      <ModalChart/>
       {/*<FinancialStatements />*/}
       {/*<FinancialChart/>*/}      
           

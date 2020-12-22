@@ -67,7 +67,7 @@ router.put('/reply/:id', (req, res) => {
 })
 
 // delete a post by id
-router.delete('/ID', (req, res) => {
+router.delete('/_id', (req, res) => {
     Blog.findByIdAndDelete(req.params.id)
     .then(() => res.json("Hey man this file is deleted!"))
     .catch(err => res.status(400).json(`Error: ${err}`));

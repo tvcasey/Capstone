@@ -19,21 +19,23 @@ const Example = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">Financial Blog</NavbarBrand>
+        <NavbarBrand href="/Blogdisplay">Financial Blog</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <Link to='/Blogdisplay'>Home
-            {/* <NavItem>
+            {/* <Link to='/Blogdisplay'>Home
+              <NavItem>
               <NavLink href="/pages/Blogdisplay">Home</NavLink>
-            </NavItem> */}
-            </Link>
+            </NavItem>
+                </Link>*/}
             {/* <NavItem>
               <NavLink href="/components/BalanceSheet">Balance Sheet</NavLink>
             </NavItem>   */}
-            <Link to='/AddPost'>Add/Reply
+            <Link to='/AddPost'>
+              <button>Add/Reply</button>
             </Link>
-            <Link to='/components/Delete'>Delete Blog
+            <Link to='/components/ModalChart'>
+              <button>Net Income Chart</button>
             </Link>
             {/* <NavItem>
               <NavLink href="/FinancialStatements">Cash Flows</NavLink>

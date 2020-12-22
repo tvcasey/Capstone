@@ -18,7 +18,7 @@ const ModalChart = (props) => {
   const toggle = () => setModal(!modal);
 
   return (
-    <div className='fluid-container'>
+    <div className='example'>
       <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
       <Modal isOpen={modal} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
         toggle={toggle} className={className} size='lg'>
