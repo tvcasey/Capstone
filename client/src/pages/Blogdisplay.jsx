@@ -10,26 +10,35 @@ import Delete from '../components/Delete';
 
 const Blogdisplay = ( props ) => {
     const [posts, setPosts] = useState([]);
-    //const [blog, setBlog] = useState([]);
+    const [blog, setBlog] = useState([]);
 
-    // const deletePost = id => {
-    //     axios.delete(`http://localhost:8080/api/blogs/delete${id}`)
-    //     .then(res => alert(res.data));
-    //     setBlog(blog.filter(elem => elem._id !== id));
-    // }
-    useEffect(() => {
+     
+        
+    
+useEffect(() => {
       axios
         .get('http://localhost:8080/api/blogs')
         .then(res => setPosts(res.data))
         .catch(error => console.log(error));
-  },    []);
+      
         console.log(posts)
+    
+        const DeletePost = _id => {
+    
+
+        axios.delete(`http://localhost:8080/api/blogs${_id}`)
+        console.log('DID YOU IN FACT DELETE ANYTHING AT ALL???')
+        .then(res => alert(res.data));
+        setBlog(blog.filter(elem => elem._id !== _id));
+        console.log('HEY BUDDY ARE FIRING OR WHAT!!?????');
+    DeletePost();
+    }},    []);
 
     return (
             <div className='flexbox-container'>
                 <div style={{height: '0px', width: '700px'}}>
-                <FinancialStatements/>
-                <Delete/>
+                {/*<FinancialStatements/>*/}
+                {/*<Delete/>*/}
                 </div>
                 {posts.map((blogs, key) => (
                     <div className='row justify-content-end' key={key}>
@@ -41,18 +50,18 @@ const Blogdisplay = ( props ) => {
                         <div className='col-sm-8'>
                             <div className='test'>
                                 
-                                <Link path='/AddPost' className='btn btn-outline-success'>
+                                <Link to='/AddPost' className='btn btn-outline-success'>
                                     Reply to Post
                                 </Link>
                             </div>
                             <div className='test'>
-                                <Link path='/AddPost' className='btn btn-outline-primary'>
+                                <Link to='/AddPost' className='btn btn-outline-primary'>
                                     Add New Post
                                 </Link>
                             </div>
                             <div className='test'>
                                 <button 
-                                onClick={() => props.setBlog(props.blog._id)}
+                                onClick={() => setBlog(blog._id)}
                                 className='btn btn-outline-danger'>
                                     Delete Post
                                 </button>
@@ -66,5 +75,5 @@ const Blogdisplay = ( props ) => {
             );
                 };    
                 
-
+            
 export default Blogdisplay;

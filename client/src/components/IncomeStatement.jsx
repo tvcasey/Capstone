@@ -24,50 +24,50 @@ function IncomeStatement() {
     }, []);
     
     return (
-    <Table striped>
-      
-        {income.annualReports.map((annualReports) => ( 
-                  <div key={annualReports}>
-      <thead>
-        <tr>
-          <th>INCOME STATEMENT</th>
-          <th>{annualReports.fiscalDateEnding}(billions)</th>
-        
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="col">Total Revenue</th>
-          <td>{annualReports.totalRevenue/1000000000}</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">Total Operating Expense</th>
-          <td>{annualReports.totalOperatingExpense/1000000000}</td>  
-        </tr>
-        <tr>
-          <th scope="row">Cost of Revenue</th>
-          <td>{annualReports.costOfRevenue/1000000000}</td>  
-        </tr>
-        <tr>
-          <th scope="row">Gross Profit</th>
-          <td>{annualReports.grossProfit/1000000000}</td>  
-        </tr>
-        <tr>
-          <th scope="row">Ebit</th>
-          <td>{annualReports.ebit/1000000000}</td>  
-        </tr>
-        <tr>
-          <th scope="row">Net Income</th>
-          <td>{annualReports.netIncome/1000000000}</td>  
-        </tr>
-        <br></br>
-      </tbody>            
-            </div>    
-            ))}
-    </Table>
-    
-    );
-}
+          <Table striped>
+            
+              {income.annualReports.map((annualReports) => ( 
+                        <div key={annualReports}>
+            <thead>
+              <tr>
+                <th>INCOME STATEMENT</th>
+                <th>{annualReports.fiscalDateEnding}(billions)</th>
+              
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="col">Total Revenue</th>
+                <td>{annualReports.totalRevenue/1000000000}</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">Total Operating Expense</th>
+                <td>{annualReports.totalOperatingExpense/1000000000}</td>  
+              </tr>
+              <tr>
+                <th scope="row">Cost of Revenue</th>
+                <td>{annualReports.costOfRevenue/1000000000}</td>  
+              </tr>
+              <tr>
+                <th scope="row">Gross Profit</th>
+                <td>{annualReports.grossProfit/1000000000}</td>  
+              </tr>
+              <tr>
+                <th scope="row">Ebit</th>
+                <td>{annualReports.ebit/1000000000}</td>  
+              </tr>
+              <tr>
+                <th scope="row">Net Income</th>
+                <td>{annualReports.netIncome/1000000000}</td>  
+              </tr>
+              <br></br>
+            </tbody>            
+                  </div>    
+                  ))}
+          </Table>
+          
+          );
+      }
             
 export default IncomeStatement;

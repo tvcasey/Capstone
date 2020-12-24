@@ -32,12 +32,12 @@ function App(props) {
       {/*<IncomeStatement/>*/}
       {/*</ThemeContext.Provider>*/}
       {/*<BalanceSheet/><CashFlows/>*/}
-      {/* <Blogdisplay/> */}
+      <Blogdisplay/>
       <Header/>
       <Navbar />
       <Main />
-      <Delete/>
-      <ModalChart/>
+      {/*<Delete/>*/}
+      {/* <ModalChart/> */}
       {/*<FinancialStatements />*/}
       {/*<FinancialChart/>*/}      
           
