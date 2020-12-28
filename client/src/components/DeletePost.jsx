@@ -1,25 +1,25 @@
-{/*import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { Route } from 'react-router-dom';
 import Blogdisplay from '../pages/Blogdisplay';
 
 
-const Delete = ( props ) => {
+const DeletePost = (id) => {
     const [blog, setBlog] = useState([]);
 
     useEffect(() => {
 
-    const deletePost = _id => {
-        Axios.delete('http://localhost:8080/api/blogs/_id')
+    
+        Axios.delete(`http://localhost:8080/api/blogs/${id}`)
         .then(res => alert(res.data));
-        setBlog(blog.filter(elem => elem._id !== _id));
-    }
-    },    []);
+        setBlog(blog.filter(elem => elem._id !== id));
+    
+        },    []);
     return (
         <div className='col-sm-2'>
                                 
-            {/* <button
-                onClick={() => setBlog(blog.id)}
+            <button
+                onClick={() => DeletePost(blog._id)}
                 className='btn btn-outline-danger'>
                 Delete Post
             </button>
@@ -36,4 +36,4 @@ const Delete = ( props ) => {
 
 
 
-export default Delete;*/}
+export default DeletePost;

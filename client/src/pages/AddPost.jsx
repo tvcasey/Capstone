@@ -7,6 +7,7 @@ const AddPost = () => {
     const [title, setTitle] = useState('');
     const [entry, setEntry] = useState('');
     const [reply, setReply] = useState('');
+//    const [blog, setBlog] = useState([]);
 
     const changeOnClick = e => {
         e.preventDefault();
@@ -22,14 +23,22 @@ const AddPost = () => {
         setTitle('');
         setEntry('');
         setReply('');
-    
+    //    setBlog('');
+
     axios
         .post('http://localhost:8080/api/blogs/add', blogs)
         .then(res => console.log(res.data))
         .catch(err => {
             console.log(err);
         })
-    };
+    }
+    /*const DeletePost = id => { 
+
+    axios
+        .delete(`http://localhost:8080/api/blogs/${id}`)
+        .then(res => alert(res.data));
+        setBlog(blog.filter(elem => elem._id !== id));
+        };*/
 
     return (
         <div className='container'>
@@ -79,11 +88,20 @@ const AddPost = () => {
                     <button type='submit' className='btn-btn-primary'>
                         Post Reply
                     </button>
+                {/*}    <br></br>
+                <div className='form-group'>
+                    <h3>Delete Post</h3>
+                    <button
+                    onClick={() => DeletePost(blog._id)}
+                    className='btn btn-outline-danger'>
+                    </button>
+
+                </div>*/}
         
             </form>
         </div>
     );
-
+       
 };
 
 export default AddPost;

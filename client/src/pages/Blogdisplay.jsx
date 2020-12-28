@@ -4,36 +4,23 @@ import Reply from './Reply';
 import './Pages.css';
 import { Link, Route } from 'react-router-dom';
 import FinancialStatements from './FinancialStatements';
-import Delete from '../components/Delete';
+import DeletePost from '../components/DeletePost';
 //import './Reply';
 
 
 const Blogdisplay = ( props ) => {
     const [posts, setPosts] = useState([]);
-    const [blog, setBlog] = useState([]);
-
      
-        
-    
-useEffect(() => {
+
+    useEffect(() => {
       axios
         .get('http://localhost:8080/api/blogs')
         .then(res => setPosts(res.data))
         .catch(error => console.log(error));
       
         console.log(posts)
+    }, []);
     
-        const DeletePost = _id => {
-    
-
-        axios.delete(`http://localhost:8080/api/blogs${_id}`)
-        console.log('DID YOU IN FACT DELETE ANYTHING AT ALL???')
-        .then(res => alert(res.data));
-        setBlog(blog.filter(elem => elem._id !== _id));
-        console.log('HEY BUDDY ARE FIRING OR WHAT!!?????');
-    DeletePost();
-    }},    []);
-
     return (
             <div className='flexbox-container'>
                 <div style={{height: '0px', width: '700px'}}>
@@ -48,8 +35,7 @@ useEffect(() => {
                         <p>{blogs.entry}</p>
                         <p>{blogs.reply}</p>                    
                         <div className='col-sm-8'>
-                            <div className='test'>
-                                
+                            <div className='test'>                                
                                 <Link to='/AddPost' className='btn btn-outline-success'>
                                     Reply to Post
                                 </Link>
@@ -60,20 +46,23 @@ useEffect(() => {
                                 </Link>
                             </div>
                             <div className='test'>
-                                <button 
-                                onClick={() => setBlog(blog._id)}
-                                className='btn btn-outline-danger'>
+                                <Link to='/AddPost' className='btn btn-outline-danger'>                                
                                     Delete Post
-                                </button>
-                            </div>
-                            
+                                </Link>
+                            </div>                            
                         </div>
                         </div>
                     </div>
-                ))}
+
+                    ))}
             </div>
-            );
-                };    
-                
-            
+        
+                );
+                                                  
+    };
+        
+        
+
+                            
 export default Blogdisplay;
+
