@@ -12,7 +12,7 @@ const FinancialStatements = ( props ) => {
 
     return (
         <div className='statements'>
-            <div> {/* style={{height: '1000px', width: '2000px'}}> */}
+            <div style={{height: '0px', width: '500px'}}>
             <IncomeStatement />
             <BalanceSheet />
             <CashFlows />

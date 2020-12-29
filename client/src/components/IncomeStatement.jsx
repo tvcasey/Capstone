@@ -24,10 +24,9 @@ function IncomeStatement() {
     }, []);
     
     return (
-          <Table striped>
-            
-              {income.annualReports.map((annualReports) => ( 
-                        <div key={annualReports}>
+          <Table striped>            
+            {income.annualReports.map((annualReports) => ( 
+            <div key={annualReports.fiscalEndingDate}>
             <thead>
               <tr>
                 <th>INCOME STATEMENT</th>

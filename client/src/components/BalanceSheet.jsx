@@ -25,7 +25,7 @@ function BalanceSheet() {
         <Table striped>
 
             {balance.annualReports.map((annualReports) => ( 
-                    <div key={annualReports.id}>
+                    <div key={annualReports.fiscalDateEnding}>
           <thead>
             <tr>
               <th>BALANCE SHEET</th>
