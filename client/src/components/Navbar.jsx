@@ -34,14 +34,14 @@ const Example = (props) => {
             <Link to='/AddPost'>
               <button>Add/Reply</button>
             </Link>
-            <Link to='/components/ModalChart'>
+            <Link to='/ModalChart'>
               <button>Net Income Chart</button>
             </Link>
             {/* <NavItem>
               <NavLink href="/FinancialStatements">Cash Flows</NavLink>
             </NavItem>   */}
           </Nav>
-          <NavbarText>Walk the Talk: Financial Blog</NavbarText>
+          <NavbarText><h3>Walk the Talk: Financial Blog</h3></NavbarText>
         </Collapse>
       </Navbar>
     </div>

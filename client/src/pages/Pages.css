@@ -7,6 +7,11 @@
     align-items: right;
     align-content: flex-start;     */
 }
+.searchbar {
+    position: relative;
+    text-align: right;
+    
+}
 
 /* .Blogdisplay .container {
     background-color: red;

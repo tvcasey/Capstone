@@ -10,7 +10,9 @@ import FinancialStatements from './FinancialStatements';
 
 const Blogdisplay = ( props ) => {
     const [posts, setPosts] = useState([]);
-     
+    const [search, setSearch] = useState('');
+    const [filteredPosts, setFilteredPosts] = useState([]);
+    
     const DeleteThePost = (postid) => {   
         //useEffect(() => {
     
@@ -31,14 +33,24 @@ const Blogdisplay = ( props ) => {
       
         console.log(posts)
     }, []);
+
+    useEffect(() => {
+        setFilteredPosts(
+            posts.filter( blogs => {
+                return (blogs.name + blogs.title + blogs.entry + blogs.reply).toLowerCase().includes( search.toLowerCase() )
+            })
+        )
+
+
+    }, [search, posts]);
     
     return (
             <div className='flexbox-container'>
-                <div style={{height: '0px', width: '500px'}}>
-                    {/*<FinancialStatements/>*/}
+                <div className='searchbar' style={{height: '0px', width: '500px'}}>
+                <input type='text' placeholder='Search' onChange={ e => setSearch(e.target.value)}/>
             
                 </div>
-                {posts.map((blogs, key) => (
+                {filteredPosts.map((blogs, key) => (
                     <div className='row justify-content-end' key={key}>
                         <div className='col-md-7'>
                         <h4>{blogs.name}</h4>
