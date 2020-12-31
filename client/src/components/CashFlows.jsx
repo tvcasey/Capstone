@@ -23,8 +23,8 @@ function CashFlows() {
     
     return (
           <Table striped>
-              {cash.annualReports.map((annualReports) => ( 
-                    <div key={annualReports.fiscalDateEnding}>
+            {cash.annualReports.map((annualReports) => ( 
+              <div key={annualReports.fiscalDateEnding}>
             <thead>
               <tr>
                 <th>CASH FLOW</th>
@@ -60,7 +60,7 @@ function CashFlows() {
               </tr>
               <br></br>
             </tbody>            
-                  </div>    
+              </div>    
               ))}
     </Table>
             );

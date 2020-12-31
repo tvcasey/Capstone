@@ -19,7 +19,7 @@ const ModalChart = (props) => {
 
   return (
     <div className='example'>
-      <Button color="btn btn-danger" onClick={toggle}>N.I. 5 yr Chart</Button>
+      <Button color="btn btn-success" onClick={toggle}>N.I. 5 yr Chart</Button>
       <Modal isOpen={modal} modalTransition={{ timeout: 700 }} backdropTransition={{ timeout: 1300 }}
         toggle={toggle} className={className} size='lg'>
         <ModalHeader toggle={toggle}>Net Income(in billions) 12/31/15 - 12/31/19 (chart below)</ModalHeader>

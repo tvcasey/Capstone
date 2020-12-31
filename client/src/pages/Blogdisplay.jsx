@@ -47,14 +47,13 @@ const Blogdisplay = ( props ) => {
     return (
             <div className='flexbox-container'>
                 <div className='searchbar' style={{height: '0px', width: '500px'}}>
-                <input type='text' placeholder='Search' onChange={ e => setSearch(e.target.value)}/>
-            
-                </div>
+                    <input type='text' placeholder='Search For All In Blogs.' onChange={ e => setSearch(e.target.value)}/>
+                </div>               
                 {filteredPosts.map((blogs, key) => (
-                    <div className='row justify-content-end' key={key}>
+                    <div className='row justify-content end' key={key}>
                         <div className='col-md-7'>
-                        <h4>{blogs.name}</h4>
-                        <span>{blogs.title}</span>
+                        <h5>{blogs.name}</h5>
+                        <h6>{blogs.title}</h6>
                         <p>{blogs.entry}</p>
                         <p>{blogs.reply}</p>                    
                         <div className='col-sm-8'>
@@ -68,7 +67,7 @@ const Blogdisplay = ( props ) => {
                                     Add New Post
                                 </Link>
                             </div>
-                            <div>
+                            <div className='test'>
                                 <button
                                 onClick={() => DeleteThePost(blogs._id)}
                                 className='btn btn-outline-danger'>

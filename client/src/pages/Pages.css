@@ -1,18 +1,38 @@
-.Blogdisplay {
-    margin: 100px 500px 100px 100px;
+/*.Blogdisplay {
+    background-color: grey;
+
     
     /* display: flex;
     justify-content: space-between;
     justify-content: space-around;
     align-items: right;
-    align-content: flex-start;     */
-}
-.searchbar {
-    position: relative;
-    text-align: right;
+    align-content: flex-start;     
+}*/
+
+/*.container {
+    top: 800px;
     
+
+}*/
+.searchbar {
+    left: 600px;
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    width: 100%;
+}
+/*.col {
+    left: 600px;
+    position: absolute;
+    text-align: left;
+    top: 400px;
+    margin-bottom: 25px;
+    width: 100%;
 }
 
+.test {
+    margin-bottom: 10px;
+}*/
 /* .Blogdisplay .container {
     background-color: red;
     
@@ -25,3 +45,9 @@
 } */
 
 
+/*.FinancialStatements {
+    background-color: greenyellow;
+}
+.statements {
+    margin-left: 100px;
+}*/

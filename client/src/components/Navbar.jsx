@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {
+  Button,
   Collapse,
   Navbar,
   NavbarToggler,
@@ -10,6 +11,7 @@ import {
   NavbarText
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import ModalChart from './ModalChart';
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,9 +36,9 @@ const Example = (props) => {
             <Link to='/AddPost'>
               <button>Add/Reply</button>
             </Link>
-            <Link to='/ModalChart'>
-              <button>Net Income Chart</button>
-            </Link>
+            {/*<Link to='/ModalChart'>
+              <Button color="btn btn-danger" onClick={toggle}>N.I. 5 yr Chart</Button>
+          </Link>*/}
             {/* <NavItem>
               <NavLink href="/FinancialStatements">Cash Flows</NavLink>
             </NavItem>   */}

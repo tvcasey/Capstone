@@ -35,12 +35,12 @@ function App(props) {
       
       <Header/>
       <Navbar />
-      <Main />
+      <Blogdisplay/>
     
       <ModalChart/>
       <FinancialStatements />
-      <Blogdisplay/>
       
+      <Main />
       {/*<FinancialChart/>*/}      
           
     </div>
