@@ -45,7 +45,7 @@ const Blogdisplay = ( props ) => {
     }, [search, posts]);
     
     return (
-            <div className='flexbox-container'>
+            <div className='container'>
                 <div className='searchbar' style={{height: '0px', width: '500px'}}>
                     <input type='text' placeholder='Search For All In Blogs.' onChange={ e => setSearch(e.target.value)}/>
                 </div>               

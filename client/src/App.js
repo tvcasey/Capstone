@@ -32,7 +32,8 @@ function App(props) {
       {/*<IncomeStatement/>*/}
       {/*</ThemeContext.Provider>*/}
       {/*<BalanceSheet/><CashFlows/>*/}
-      
+      <SignIn />
+      <SignUp />
       <Header/>
       <Navbar />
       <Blogdisplay/>
@@ -41,6 +42,7 @@ function App(props) {
       <FinancialStatements />
       
       <Main />
+      
       {/*<FinancialChart/>*/}      
           
     </div>

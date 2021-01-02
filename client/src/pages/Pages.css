@@ -51,3 +51,11 @@
 .statements {
     margin-left: 100px;
 }*/
+.SignIn .container {
+    left: 600px;
+    top: 500px;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    
+}
