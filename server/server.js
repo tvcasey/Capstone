@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 const config = require('config');
 const cors = require('cors');
 const blogs = require('./routes/blogs');

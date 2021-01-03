@@ -36,9 +36,8 @@ function App(props) {
       <SignUp />
       <Header/>
       <Navbar />
-      <Blogdisplay/>
-    
       <ModalChart/>
+      <Blogdisplay/>
       <FinancialStatements />
       
       <Main />
