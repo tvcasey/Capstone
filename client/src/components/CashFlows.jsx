@@ -22,47 +22,47 @@ function CashFlows() {
     }, []);
     
     return (
-          <Table striped>
-            {cash.annualReports.map((annualReports) => ( 
-              <div key={annualReports.fiscalDateEnding}>
-            <thead>
-              <tr>
-                <th>CASH FLOW</th>
-                <th>{annualReports.fiscalDateEnding}(billions)</th>
-              
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Investment Cash Flows</th>
-                <td>{annualReports.cashflowFromInvestment/1000000000}</td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Financing Cash Flows</th>
-                <td>{annualReports.cashflowFromFinancing/1000000000}</td>  
-              </tr>
-              <tr>
-                <th scope="row">Change in Operating Activities</th>
-                <td>{annualReports.changeInOperatingActivities/1000000000}</td>  
-              </tr>
-              <tr>
-                <th scope="row">Net Income</th>
-                <td>{annualReports.netIncome/1000000000}</td>  
-              </tr>
-              <tr>
-                <th scope="row">Change in Cash</th>
-                <td>{annualReports.changeInCash/1000000000}</td>  
-              </tr>
-              <tr>
-                <th scope="row">Operating Cash Flow</th>
-                <td>{annualReports.operatingCashflow/1000000000}</td>  
-              </tr>
-              <br></br>
-            </tbody>            
-              </div>    
+        <Table striped>
+          {cash.annualReports.map((annualReports) => ( 
+            <div key={annualReports.fiscalDateEnding}>
+              <thead>
+                <tr>
+                  <th>CASH FLOW</th>
+                  <th>{annualReports.fiscalDateEnding}(billions)</th>
+                
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Investment Cash Flows</th>
+                  <td>{annualReports.cashflowFromInvestment/1000000000}</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Financing Cash Flows</th>
+                  <td>{annualReports.cashflowFromFinancing/1000000000}</td>  
+                </tr>
+                <tr>
+                  <th scope="row">Change in Operating Activities</th>
+                  <td>{annualReports.changeInOperatingActivities/1000000000}</td>  
+                </tr>
+                <tr>
+                  <th scope="row">Net Income</th>
+                  <td>{annualReports.netIncome/1000000000}</td>  
+                </tr>
+                <tr>
+                  <th scope="row">Change in Cash</th>
+                  <td>{annualReports.changeInCash/1000000000}</td>  
+                </tr>
+                <tr>
+                  <th scope="row">Operating Cash Flow</th>
+                  <td>{annualReports.operatingCashflow/1000000000}</td>  
+                </tr>
+                <br></br>
+              </tbody>            
+            </div>    
               ))}
-    </Table>
+        </Table>
             );
             }
 

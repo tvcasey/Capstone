@@ -22,53 +22,42 @@ function BalanceSheet() {
     }, []);
     
     return (
-        <Table striped>
-
+      <Table striped>
+          <div>
             {balance.annualReports.map((annualReports) => ( 
-                    <div key={annualReports.fiscalDateEnding}>
-          <thead>
-            <tr>
-              <th>BALANCE SHEET</th>
-              <br></br>  
-              {/*<th>FISCAL YEAR(in billions)</th>*/}
-              <th>{annualReports.fiscalDateEnding}(billions)</th>
-            
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="col">Total Assets</th>
-              <br></br>
-              <td>{annualReports.totalAssets/1000000000}</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">Total Liabilities</th>
-              <br></br>
-              <td>{annualReports.totalLiabilities/1000000000}</td>  
-            </tr>
-            <tr>
-              <th scope="row">Total Shareholder Equity</th>
-              <br></br>
-              <td>{annualReports.totalShareholderEquity/1000000000}</td>  
-            </tr>
-            <br></br>
-            {/*<tr>
-              <th scope="row">Gross Profit</th>
-              <td>{annualReports.grossProfit/1000000000}</td>  
-            </tr>
-            <tr>
-              <th scope="row">Ebit</th>
-              <td>{annualReports.ebit/1000000000}</td>  
-            </tr>
-            <tr>
-              <th scope="row">Net Income</th>
-              <td>{annualReports.netIncome/1000000000}</td>  
-            </tr>*/}
-          </tbody>            
-                </div>    
+            <div key={annualReports.fiscalDateEnding}>
+                <thead>
+                  <tr>
+                    <th>BALANCE SHEET</th>
+                    <br></br>  
+                    {/*<th>FISCAL YEAR(in billions)</th>*/}
+                    <th>{annualReports.fiscalDateEnding}(billions)</th>
+                  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col">Total Assets</th>
+                    <br></br>
+                    <td>{annualReports.totalAssets/1000000000}</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total Liabilities</th>
+                    <br></br>
+                    <td>{annualReports.totalLiabilities/1000000000}</td>  
+                  </tr>
+                  <tr>
+                    <th scope="row">Total Shareholder Equity</th>
+                    <br></br>
+                    <td>{annualReports.totalShareholderEquity/1000000000}</td>  
+                  </tr>
+                  <br></br>            
+                </tbody>            
+            </div>    
                 ))}
-        </Table>
+          </div>
+      </Table>
             );
             }
 

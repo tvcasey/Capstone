@@ -46,7 +46,7 @@ const Blogdisplay = ( props ) => {
     
     return (
             <div className='container'>
-                <div className='searchbar' style={{height: '0px', width: '500px'}}>
+                <div className='searchbar' style={{height: '25px', width: '500px'}}>
                     <input type='text' placeholder='Search For All In Blogs.' onChange={ e => setSearch(e.target.value)}/>
                 </div>               
                 {filteredPosts.map((blogs, key) => (

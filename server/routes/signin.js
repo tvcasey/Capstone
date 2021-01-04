@@ -1,17 +1,20 @@
+const express = require('express');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
+const router = express.Router();
 module.exports = (app) => {
 
 
 
 app.post('/signup', (req, res, next) => {
     const { body } = req;
-    const {
-        password
-    } = body;
     let {
         email
     } = body;
+    const {
+        password
+    } = body;
+    
 
     if (!email) {
         return res.end({
