@@ -32,14 +32,14 @@ function App(props) {
       {/*<IncomeStatement/>*/}
       {/*</ThemeContext.Provider>*/}
       {/*<BalanceSheet/><CashFlows/>*/}
-      <SignIn />
-      <SignUp />
+      
       <Header/>
       <Navbar />
       <ModalChart/>
       <Blogdisplay/>
-      <FinancialStatements />
-      
+      {/*<FinancialStatements />*/}
+      {/*<SignIn />*/}
+      {/*<SignUp />*/}
       <Main />
       
       {/*<FinancialChart/>*/}      

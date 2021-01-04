@@ -50,7 +50,7 @@ const Blogdisplay = ( props ) => {
                     <input type='text' placeholder='Search For All In Blogs.' onChange={ e => setSearch(e.target.value)}/>
                 </div>               
                 {filteredPosts.map((blogs, key) => (
-                    <div className='row justify-content end' key={key}>
+                    <div className='row justify-content-end' key={key}>
                         <div className='col-md-7'>
                         <h5>{blogs.name}</h5>
                         <h6>{blogs.title}</h6>

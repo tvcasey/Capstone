@@ -11,9 +11,19 @@
 
 /*.container {
     top: 800px;
+
+
     
 
 }*/
+/* .Blogdisplay .container {
+    /* position: relative;
+    left: 600px;
+    text-align: left;
+    width: 50%; 
+} */
+
+
 .searchbar {
     left: 600px;
     position: absolute;
@@ -45,12 +55,12 @@
 } */
 
 
-/*.FinancialStatements {
+.FinancialStatements {
     background-color: greenyellow;
 }
 .statements {
     margin-left: 100px;
-}*/
+}
 .SignIn .container {
     left: 600px;
     top: 500px;
@@ -59,3 +69,4 @@
     width: 100%;
     
 }
+

@@ -34,8 +34,20 @@ const Example = (props) => {
               <NavLink href="/components/BalanceSheet">Balance Sheet</NavLink>
             </NavItem>   */}
             <Link to='/AddPost'>
-              <button>Add/Reply</button>
+              <button className='btn btn-warning'>Add/Reply</button>
             </Link>
+            <Link to='/SignIn'>
+              <button className='btn btn-primary'>Login</button>
+            </Link>
+            <Link to='SignUp'>
+              <button className='btn btn-info'>Sign Up</button>
+            </Link>
+            <Link to='FinancialStatements'>
+              <button className='btn btn-secondary'>Financial Statements</button>
+            </Link>
+            {/*<Link to='./components/ModalChart'>
+              <button classname='btn btn-success'>Net Income: 5 Years</button>
+          </Link>*/}
             {/*<Link to='/ModalChart'>
               <Button color="btn btn-danger" onClick={toggle}>N.I. 5 yr Chart</Button>
           </Link>*/}
@@ -43,7 +55,7 @@ const Example = (props) => {
               <NavLink href="/FinancialStatements">Cash Flows</NavLink>
             </NavItem>   */}
           </Nav>
-          <NavbarText><h3>Walk the Talk: Financial Blog</h3></NavbarText>
+          <NavbarText><h4>Walk the Talk: Financial Blog</h4></NavbarText>
         </Collapse>
       </Navbar>
     </div>
