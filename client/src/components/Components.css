@@ -1,20 +1,10 @@
-/* .ModalChart .fluid-container {
-    max-height: 100%;
-    position: absolute;
-    overflow: scroll; 
 
-}*/
 .Modal.xl {
     height: 150vh;
     overflow-y: auto;
 
 }
 
-/* .ModalBody {
-    height: 80vh;
-    overflow-y: auto;
-
-} */
 
 .ModalChart .example {
     position: relative;
@@ -27,15 +17,13 @@
 
 }
 
-/*.Header {
-    width: 100%;
+.Header {
 }
 
 .page-header {
-    position: absolute;
-    margin-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    margin-left: 40px;
-    width: 95%;
-}*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+

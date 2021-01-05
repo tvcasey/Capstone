@@ -45,12 +45,13 @@ const Example = (props) => {
             <Link to='FinancialStatements'>
               <button className='btn btn-secondary'>Financial Statements</button>
             </Link>
-            {/*<Link to='./components/ModalChart'>
+            {/*<Link to='/components/ModalChart'>
               <button classname='btn btn-success'>Net Income: 5 Years</button>
-          </Link>*/}
-            {/*<Link to='/ModalChart'>
-              <Button color="btn btn-danger" onClick={toggle}>N.I. 5 yr Chart</Button>
-          </Link>*/}
+            </Link>*/}
+            <Link>
+              <ModalChart />
+              {/*<Button color="btn btn-danger" onClick={toggle}>N.I. 5 yr Chart</Button>*/}
+            </Link>
             {/* <NavItem>
               <NavLink href="/FinancialStatements">Cash Flows</NavLink>
             </NavItem>   */}

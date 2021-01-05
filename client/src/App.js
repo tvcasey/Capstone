@@ -35,8 +35,8 @@ function App(props) {
       
       <Header/>
       <Navbar />
-      <ModalChart/>
-      <Blogdisplay/>
+      {/*<ModalChart/>*/}
+      {/*<Blogdisplay/>*/}
       {/*<FinancialStatements />*/}
       {/*<SignIn />*/}
       {/*<SignUp />*/}

@@ -1,13 +1,16 @@
-/*.Blogdisplay {
+.Blogdisplay  {
     background-color: grey;
 
     
-    /* display: flex;
-    justify-content: space-between;
-    justify-content: space-around;
-    align-items: right;
-    align-content: flex-start;     
-}*/
+        
+}
+.row {
+    position: relative;
+    margin-left: 400px;
+    margin-right: 400px;
+    width: 100%;
+    
+}
 
 /*.container {
     top: 800px;
