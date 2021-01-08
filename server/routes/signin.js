@@ -1,19 +1,36 @@
 const express = require('express');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
-const router = express.Router();
-module.exports = (app) => {
+const router = require('express').Router();
 
 
 
-app.post('/signup', (req, res, next) => {
-    const { body } = req;
-    let {
-        email
-    } = body;
-    const {
-        password
-    } = body;
+module.exports = () => {
+    
+
+/*router.post('/signup', (req, res, next) => {
+        const newUser = new User({
+            email: req.body.email,
+            password: req.body.password,
+            isDeleted: req.body.isDeleted,
+        });
+    
+        newUser
+        .save()
+        .then(() => res.json("Your email and password are saved!"))
+        .catch(err => res.status(400).json(`Error: ${err}`));
+    
+    });*/
+
+router.post('/signup', (req, res, next) => {
+        const { body } = req;
+        let {
+            email
+        } = body;
+        const {
+            password
+        } = body;
+        
     
 
     if (!email) {
@@ -58,7 +75,7 @@ app.post('/signup', (req, res, next) => {
         });
     });
 
-
 };
+
 
 
