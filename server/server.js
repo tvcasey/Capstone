@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.json());
 app.use('/api/blogs', blogs);
-app.use("/api/users", users);
+app.use('/api/users', users);
 //app.use('/api/replies', replies);
 
 const uri = config.get('mongoURI');

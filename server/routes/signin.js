@@ -1,38 +1,34 @@
 const express = require('express');
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
-const router = require('express').Router();
+const router = express.Router();
+const app = require('express')();
 
-
-
-module.exports = () => {
-    
-
-/*router.post('/signup', (req, res, next) => {
-        const newUser = new User({
-            email: req.body.email,
-            password: req.body.password,
-            isDeleted: req.body.isDeleted,
-        });
-    
-        newUser
-        .save()
-        .then(() => res.json("Your email and password are saved!"))
-        .catch(err => res.status(400).json(`Error: ${err}`));
-    
-    });*/
-
+module.exports = router => {    
+       
 router.post('/signup', (req, res, next) => {
         const { body } = req;
+        const {
+            firstName,
+            lastName,
+            password
+        } = body;
         let {
             email
         } = body;
-        const {
-            password
-        } = body;
         
-    
-
+    if (!firstName) {
+        return res.end({
+            success: false,
+            message: 'Enter your first name.'
+        });
+    }
+    if (!lastName) {
+        return res.end({
+            success: false,
+            message: 'Enter your last name.'
+        })
+    }
     if (!email) {
         return res.end({
             success: false,
@@ -51,14 +47,23 @@ router.post('/signup', (req, res, next) => {
         email: email
     },   (err, previousUsers) => {
         if (err) {
-            return res.end('Error')
+            return res.end({
+                success: false,
+                message: 'There is an error.'
+            });
     }   else if (previousUsers.length > 0) {
-            return res.end('There Already is an Account for this Email.')
-    }
+            return res.end({
+                success: false,
+                message: 'Password already exists.'
+            });    
+        }
+    
 
         const newUser = new User();
 
         newUser.email = email;
+        newUser.firstName = firstName;
+        newUser.lastName = lastName;
         newUser.password = newUser.generateHash(password);
         newUser.save((err, user) => {
             if (err) {
@@ -76,6 +81,6 @@ router.post('/signup', (req, res, next) => {
     });
 
 };
-
+//module.exports = app;
 
 

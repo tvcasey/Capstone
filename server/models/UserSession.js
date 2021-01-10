@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 
 
-const SessionSchema = new mongoose.Schema({
+const UserSessionSchema = new mongoose.Schema({
     userId: {
         type: Number,
         default: -1
@@ -18,4 +18,4 @@ const SessionSchema = new mongoose.Schema({
 });
 
 
-module.exports = mongoose.model('Session', SessionSchema);
+module.exports = mongoose.model('UserSession', UserSessionSchema);
