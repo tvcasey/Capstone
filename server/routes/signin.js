@@ -1,10 +1,11 @@
 const express = require('express');
 const User = require('../models/User');
+const UserSession = require('../models/UserSession');
 const bcrypt = require('bcrypt');
 const router = express.Router();
 const app = require('express')();
 
-module.exports = router => {    
+//module.exports = router => {    
        
 router.post('/signup', (req, res, next) => {
         const { body } = req;
@@ -18,25 +19,25 @@ router.post('/signup', (req, res, next) => {
         } = body;
         
     if (!firstName) {
-        return res.end({
+        return res.send({
             success: false,
             message: 'Enter your first name.'
         });
     }
     if (!lastName) {
-        return res.end({
+        return res.send({
             success: false,
             message: 'Enter your last name.'
         })
     }
     if (!email) {
-        return res.end({
+        return res.send({
             success: false,
             message: 'Please Enter a Valid Email Address.'
     });
 }
     if (!password) {
-        return res.end({
+        return res.send({
             success: false,
             message: 'Please Enter a Valid Password'
         });
@@ -47,12 +48,12 @@ router.post('/signup', (req, res, next) => {
         email: email
     },   (err, previousUsers) => {
         if (err) {
-            return res.end({
+            return res.send({
                 success: false,
                 message: 'There is an error.'
             });
     }   else if (previousUsers.length > 0) {
-            return res.end({
+            return res.send({
                 success: false,
                 message: 'Password already exists.'
             });    
@@ -67,20 +68,97 @@ router.post('/signup', (req, res, next) => {
         newUser.password = newUser.generateHash(password);
         newUser.save((err, user) => {
             if (err) {
-                return res.end({
+                return res.send({
                     success: false,
                     message: 'Sorry, Unable to Sign Up.'   
                 });        
             }
-                return res.end({
+                return res.send({
                     success: true,
                     message: 'Welcome Aboard- Signed Up.'
                 });
             });
         });
     });
+    router.post('/signin', (req, res, next) => {
+        const { body } = req;
+        const {
+            password
+        } = body;
+        let {
+            email
+        } = body;
+    
+        if (!email) {
+            return res.send({
+                success: false,
+                message: 'Please Enter a Valid Email Address.'
+        });
+    }
+        if (!password) {
+            return res.send({
+                success: false,
+                message: 'Enter Password to the Field.'
+            });
+        }
 
-};
-//module.exports = app;
+        email = email.toLowerCase();
+
+        User.find({
+            email: email
+        },  (err, users) => {
+            if (err) {
+                return res.send({
+                    success: false,
+                    message: 'Server Error.'                    
+                });
+            }
+        
+            if (users.length != 1) {
+                return res.send({
+                    success: false,
+                    message: 'Invalid Entry.'
+                });
+        }
+
+        const user = users[0];
+        if (!user.validPassword(password)) {
+            return res.send({
+                success: false,
+                message: 'Error'
+            });
+        }
+
+        const userSesssion = new UserSession();
+        userSession.userId = user._id;
+        userSession.save((err, doc) => {
+            if (err) {
+                return res.send({
+                    success: false,
+                    message: 'Error'
+                });
+            }
+
+            return res.send({
+                success: true,
+                message: 'It is official- You are Signed In.',
+                token: doc._id
+            });
+        });
+    });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+module.exports = router;
 
 
