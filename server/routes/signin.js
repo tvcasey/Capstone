@@ -129,7 +129,7 @@ router.post('/signup', (req, res, next) => {
             });
         }
 
-        const userSesssion = new UserSession();
+        const userSession = new UserSession();
         userSession.userId = user._id;
         userSession.save((err, doc) => {
             if (err) {
@@ -147,7 +147,61 @@ router.post('/signup', (req, res, next) => {
         });
     });
     });
+    router.get('/verify', (req, res, next) => {
+        const { query } = req;
+        const { token } = query;
 
+        UserSession.find({
+            _id: token,
+            isDeleted: false
+        },  (err, sessions) => {
+            if (err) {
+                return res.send({
+                    success: false,
+                    message: 'Verify Error.'
+                });
+        }
+            if (sessions.length != 1) {
+                return res.send({
+                    success: false,
+                    message: 'Oh My, Something Went Wrong.'
+                })
+            } else {
+                return res.send({
+                    success: true,
+                    message: 'Good, Glad You Are Here.'
+                });
+            }
+        });
+        });
+        router.get('/logout', (req, res, next) => {
+            const { query } = req;
+            const { token } = query;
+    
+            UserSession.findOneAndUpdate({
+            
+                _id: token,
+                isDeleted: false
+            },  {
+                $set:{
+                    isDeleted:true}
+            },  null, (err, sessions) => {  
+                if (err) {
+                    console.log(err);
+                    return res.send({
+                        success: false,
+                        message: 'Logout Error.'
+                    });
+            }
+                    return res.send({
+                        success: true,
+                        message: 'Good, Glad You Were Here.'
+                    });
+                });
+            });
+    
+    
+    
 
 
 
