@@ -12,12 +12,15 @@ router.post('/signup', (req, res, next) => {
         const {
             firstName,
             lastName,
+            email,
             password
+        //} = body;
+        //let {
+        //    email
         } = body;
-        let {
-            email
-        } = body;
-        
+
+
+    //});        
     if (!firstName) {
         return res.send({
             success: false,
@@ -42,10 +45,10 @@ router.post('/signup', (req, res, next) => {
             message: 'Please Enter a Valid Password'
         });
     }
-    email = email.toLowerCase();
+    //email = email.toLowerCase();
 
     User.find({
-        email: email
+        email: email.toLowerCase()
     },   (err, previousUsers) => {
         if (err) {
             return res.send({
@@ -61,10 +64,9 @@ router.post('/signup', (req, res, next) => {
     
 
         const newUser = new User();
-
-        newUser.email = email;
         newUser.firstName = firstName;
         newUser.lastName = lastName;
+        newUser.email = email;
         newUser.password = newUser.generateHash(password);
         newUser.save((err, user) => {
             if (err) {
